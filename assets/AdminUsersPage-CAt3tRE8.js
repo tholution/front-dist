@@ -1,1 +1,0 @@
-import{_ as s,a as t,c as n,b as a}from"./index-B4y-BqRu.js";const o={},r={class:"p-8"};function c(d,e){return t(),n("div",r,[...e[0]||(e[0]=[a("h1",{class:"text-2xl font-bold mb-4"},"Admin: User Management",-1)])])}const l=s(o,[["render",c]]);export{l as default};
