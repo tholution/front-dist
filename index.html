@@ -2,13 +2,281 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tholution</title>
-    <script type="module" crossorigin src="./assets/index-Qlj8c9xn.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CT3UeF5n.css">
+    <meta
+      name="description"
+      content="Pages for technical support work: the links you keep reaching for, a recording that needs a walkthrough, a reply that still reads wrong."
+    />
+    <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Outfit:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f3efe6;
+        --sheet: #fffcf7;
+        --ink: #1c1915;
+        --muted: #6b645c;
+        --line: #e4dccf;
+        --rail: #1e1b16;
+        --rail-text: #f3efe6;
+        --copper: #c45c26;
+        --copper-ink: #fff8f3;
+        --radius: 10px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Outfit, sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      a { color: inherit; }
+      .wrap {
+        width: min(960px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 20px 0;
+      }
+      .wordmark {
+        font-family: Fraunces, serif;
+        font-size: 26px;
+        font-weight: 560;
+        text-decoration: none;
+        line-height: 1;
+      }
+      .bar nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      .bar nav a { text-decoration: none; }
+      .bar nav a:not(.sign-in) { color: var(--muted); }
+      .bar nav a:not(.sign-in):hover { color: var(--ink); }
+      .sign-in {
+        display: inline-flex;
+        align-items: center;
+        height: 36px;
+        padding: 0 14px;
+        border-radius: 8px;
+        background: var(--copper);
+        color: var(--copper-ink);
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .sign-in:hover { filter: brightness(1.05); }
+      .hero {
+        padding: 72px 0 80px;
+        border-bottom: 1px solid var(--line);
+      }
+      .hero h1 {
+        font-family: Fraunces, serif;
+        font-weight: 560;
+        font-size: 48px;
+        line-height: 1.12;
+        margin: 0 0 18px;
+      }
+      .lede {
+        margin: 0 0 28px;
+        font-size: 18px;
+        max-width: 38rem;
+        color: var(--ink);
+      }
+      .hero-actions { display: flex; align-items: center; gap: 16px; }
+      .hero-actions .quiet {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .hero-actions .quiet:hover { color: var(--ink); }
+      section { padding: 64px 0; }
+      section h2 {
+        font-family: Fraunces, serif;
+        font-weight: 560;
+        font-size: 28px;
+        margin: 0 0 8px;
+      }
+      .section-lead {
+        margin: 0 0 28px;
+        color: var(--muted);
+        max-width: 36rem;
+      }
+      .points {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .sheet {
+        background: var(--sheet);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 18px 18px 20px;
+      }
+      .sheet h3 {
+        font-family: Fraunces, serif;
+        font-size: 22px;
+        font-weight: 560;
+        margin: 0 0 8px;
+      }
+      .sheet p { margin: 0; color: var(--muted); }
+      .how { border-top: 1px solid var(--line); }
+      .steps {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: step;
+      }
+      .steps li {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        gap: 14px;
+        align-items: start;
+        padding: 16px 18px;
+        background: var(--sheet);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+      }
+      .steps li::before {
+        counter-increment: step;
+        content: counter(step);
+        font-family: Fraunces, serif;
+        font-size: 22px;
+        font-weight: 560;
+        color: var(--copper);
+        line-height: 1.1;
+      }
+      .steps strong { font-weight: 560; }
+      .steps p { margin: 4px 0 0; color: var(--muted); }
+      .foot {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 40px;
+      }
+      .foot-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .foot p { margin: 0; color: var(--muted); font-size: 14px; }
+      @media (max-width: 800px) {
+        .points { grid-template-columns: 1fr; }
+        .hero h1 { font-size: 36px; }
+        .bar nav a:not(.sign-in) { display: none; }
+      }
+      @media (max-width: 640px) {
+        .wrap { width: calc(100% - 40px); }
+        .hero { padding: 48px 0 56px; }
+        section { padding: 48px 0; }
+        .hero-actions { flex-wrap: wrap; }
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <div class="wrap bar">
+        <a class="wordmark" href="./">Tholution</a>
+        <nav>
+          <a href="#work">Work</a>
+          <a href="#how">How</a>
+          <a class="sign-in" href="https://app.tholution.com/login">Sign in</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <h1>Tools for technical support work</h1>
+          <p class="lede">
+            Pages used on the ticket: the links you keep reaching for, a
+            recording that needs a walkthrough, a reply that still reads wrong.
+          </p>
+          <div class="hero-actions">
+            <a class="sign-in" href="https://app.tholution.com/login">Sign in</a>
+            <a class="quiet" href="https://app.tholution.com/register">Create account</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <div class="wrap">
+          <h2>What it is for</h2>
+          <p class="section-lead">
+            A few pages that sit next to a support ticket. Nothing you have to
+            set up before the next message comes in.
+          </p>
+          <div class="points">
+            <article class="sheet">
+              <h3>Links and notes</h3>
+              <p>
+                Keep the URLs and snippets you open during a ticket, grouped
+                however you like.
+              </p>
+            </article>
+            <article class="sheet">
+              <h3>Recordings</h3>
+              <p>
+                Drop a screen capture. Mark the frame, write what happened, and
+                send a short walkthrough.
+              </p>
+            </article>
+            <article class="sheet">
+              <h3>Replies</h3>
+              <p>
+                Paste a note or a reply and get a cleaner version in the
+                language you are writing in.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="how" id="how">
+        <div class="wrap">
+          <h2>How it goes</h2>
+          <p class="section-lead">Sign in, open the page that matches the ticket, leave when you are done.</p>
+          <ol class="steps">
+            <li>
+              <div>
+                <strong>Sign in</strong>
+                <p>Use the account you already have.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Open the page you need</strong>
+                <p>Links, a recording, or a reply. Whatever the ticket is asking for.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Come back later</strong>
+                <p>What you saved is still there the next time you sign in.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <a class="wordmark" href="./">Tholution</a>
+        <p>2026</p>
+      </div>
+    </footer>
   </body>
 </html>

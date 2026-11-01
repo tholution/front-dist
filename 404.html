@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not found · Tholution</title>
+    <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Outfit:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f3efe6;
+        --ink: #1c1915;
+        --muted: #6b645c;
+        --line: #e4dccf;
+        --copper: #c45c26;
+        --copper-ink: #fff8f3;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Outfit, sans-serif;
+        font-size: 15px;
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(960px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      .wordmark {
+        font-family: Fraunces, serif;
+        font-size: 26px;
+        font-weight: 560;
+        text-decoration: none;
+        color: inherit;
+        line-height: 1;
+      }
+      .sign-in {
+        display: inline-flex;
+        align-items: center;
+        height: 36px;
+        padding: 0 14px;
+        border-radius: 8px;
+        background: var(--copper);
+        color: var(--copper-ink);
+        text-decoration: none;
+      }
+      main {
+        width: min(960px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 72px 0 80px;
+        border-top: 1px solid var(--line);
+      }
+      h1 {
+        font-family: Fraunces, serif;
+        font-weight: 560;
+        font-size: 36px;
+        margin: 0 0 8px;
+      }
+      p { color: var(--muted); margin: 0 0 24px; }
+      .back {
+        display: inline-flex;
+        height: 36px;
+        align-items: center;
+        padding: 0 14px;
+        border-radius: 8px;
+        background: var(--copper);
+        color: var(--copper-ink);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bar">
+      <a class="wordmark" href="./">Tholution</a>
+      <a class="sign-in" href="https://app.tholution.com/login">Sign in</a>
+    </header>
+    <main>
+      <h1>Not found</h1>
+      <p>That page is not on this site.</p>
+      <a class="back" href="./">Back</a>
+    </main>
+  </body>
+</html>
