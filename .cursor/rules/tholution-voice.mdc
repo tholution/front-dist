@@ -1,0 +1,50 @@
+---
+description: >
+  Tholution product voice and content direction for landing/UI copy.
+  Prefer concrete tool naming over ticket-scene poetry.
+alwaysApply: true
+---
+
+# Tholution voice and product direction
+
+Audience: people doing technical support. Product: a few small tools next to that work — not a suite pitch, not AI-chat framing.
+
+## Perspective (from the current landing direction)
+
+Lead with **what each tool is**, in plain product language. Support is the context, not a story you retell.
+
+Three tools, named as capabilities:
+
+1. **Shortcuts / links and snippets** — cut down browser tabs; keep URLs and snippets grouped
+2. **Recordings** — basic video subtitle and annotation (mark a span, write what happened)
+3. **Replies / language** — correction and optimization; **no prompts**
+
+## How to write
+
+- Short sentences. Concrete nouns. Understate (`basic`, `a few`, `without prompts`).
+- Name the tool job first; ticket/workflow color is optional and light.
+- Prefer tool labels over soft synonyms when the user already chose them (`snippets` not `notes`; `correction` / `corrected` not vague “cleaner”).
+- Do not sell: no “platform”, “suite”, “AI assistant”, prompt-engineering talk, or feature-list marketing.
+
+## Avoid (older landing drift)
+
+```
+BAD:  Pages used on the ticket: the links you keep reaching for, a
+      recording that needs a walkthrough, a reply that still reads wrong.
+
+BAD:  Mark the frame, write what happened, and send a short walkthrough.
+BAD:  get a cleaner version in the language you are writing in.
+BAD:  destinated version
+```
+
+```
+GOOD: Shortcuts that cut down browser tabs; a basic video subtitle and
+      annotation tool; a language correction tool without prompts.
+
+GOOD: Drop a screen capture. Mark the segment, write what happened.
+GOOD: Paste a note or a reply and get a corrected version without prompts.
+```
+
+## Scope
+
+Apply to landing copy, meta description, in-app empty states, README blurbs, and any new marketing-facing English for this repo. Keep English UI.
